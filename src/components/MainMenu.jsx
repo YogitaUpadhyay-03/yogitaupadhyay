@@ -250,7 +250,7 @@ export default function MainMenu({ onNavigate }) {
               <button 
                 onClick={() => {
                   setIsPopupOpen(false);
-                  onNavigate('uiux-experience');
+                  onNavigate('experience-intro');
                 }}
                 style={{
                   left: "17.25%",

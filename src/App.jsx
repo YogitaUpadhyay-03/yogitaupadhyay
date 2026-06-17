@@ -10,6 +10,7 @@ import CafeteriaCerts from './components/CafeteriaCerts';
 import EmergencyTransition from './components/EmergencyTransition';
 import UiuxProjects from './components/UiuxProjects';
 import UiuxExperience from './components/UiuxExperience';
+import ExperienceIntro from './components/ExperienceIntro';
 import AboutIntro from './components/AboutIntro';
 import About from './components/About';
 import GraphicIntro from './components/GraphicIntro';
@@ -387,6 +388,12 @@ export default function App() {
         {screen === 'about-intro' && (
           <ScreenTransition key="about-intro">
             <AboutIntro onComplete={() => setScreen('about')} />
+          </ScreenTransition>
+        )}
+
+        {screen === 'experience-intro' && (
+          <ScreenTransition key="experience-intro">
+            <ExperienceIntro onComplete={() => setScreen('uiux-experience')} />
           </ScreenTransition>
         )}
 
