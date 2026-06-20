@@ -8,7 +8,6 @@ import certificatesIcon from '../assets/certificates_icon.png';
 import aboutIcon from '../assets/about_icon.png';
 import uiuxDesigner from '../assets/uiux_designer.png';
 import graphicDesigner from '../assets/graphic_designer.png';
-import videoEditor from '../assets/video_editor.png';
 import uiuxPopupMenu from '../assets/uiux_popup_menu.png';
 import popupSoundSrc from '../assets/popup_sound.mp3';
 import exitButton from '../assets/exit_button.png';
@@ -110,7 +109,7 @@ export default function MainMenu({ onNavigate }) {
             </h1>
 
             {/* Role Buttons Group - Utilizing provided Figma image assets directly at their scaled up size (mt reduced for a connected layout) */}
-            <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-3 w-full lg:max-w-[430px] mt-6 lg:mt-3">
+            <div className="flex flex-col items-center gap-4 lg:gap-3 w-full lg:max-w-[430px] mt-6 lg:mt-3">
               {/* Primary Role (UI/UX Designer) */}
               <button 
                 onClick={handleUiuxClick}
@@ -123,29 +122,17 @@ export default function MainMenu({ onNavigate }) {
                 />
               </button>
 
-              {/* Secondary Roles Side-by-Side */}
-              <div className="flex flex-col md:flex-row gap-4 md:gap-3 w-[85%] max-w-[320px] md:max-w-[320px] lg:w-[430px] lg:max-w-none justify-center lg:justify-start">
-                {/* Graphic Designer */}
-                <button 
-                  onClick={() => onNavigate('graphic-intro')}
-                  className="bg-transparent border-0 p-0 hover:scale-[1.03] active:scale-[0.98] transition-transform duration-200 cursor-pointer focus:outline-none w-full md:flex-1 flex items-center justify-center lg:justify-start"
-                >
-                  <img
-                    src={graphicDesigner}
-                    alt="Graphic Designer"
-                    className="w-full h-auto object-contain select-none pointer-events-none"
-                  />
-                </button>
-
-                {/* Video Editor */}
-                <button className="bg-transparent border-0 p-0 hover:scale-[1.03] active:scale-[0.98] transition-transform duration-200 cursor-pointer focus:outline-none w-full md:flex-1 flex items-center justify-center lg:justify-start">
-                  <img
-                    src={videoEditor}
-                    alt="Video Editor"
-                    className="w-full h-auto object-contain select-none pointer-events-none"
-                  />
-                </button>
-              </div>
+              {/* Graphic Designer */}
+              <button 
+                onClick={() => onNavigate('graphic-intro')}
+                className="bg-transparent border-0 p-0 hover:scale-[1.03] active:scale-[0.98] transition-transform duration-200 cursor-pointer focus:outline-none w-[42.5%] max-w-[160px] lg:w-[215px] flex items-center justify-center lg:justify-start"
+              >
+                <img
+                  src={graphicDesigner}
+                  alt="Graphic Designer"
+                  className="w-full h-auto object-contain select-none pointer-events-none"
+                />
+              </button>
             </div>
 
             {/* Navigation Icons at Bottom - Medium-sized icons, increased horizontal spacing, fully bg-transparent backgrounds */}
