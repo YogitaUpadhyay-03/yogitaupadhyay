@@ -217,7 +217,7 @@ export default function App() {
         clearTimeout(transitionTimeout);
         stopAudio(startAudioRef, "Start");
       };
-    } else if (['main-menu', 'cafeteria-certs', 'about'].includes(screen)) {
+    } else if (['main-menu'].includes(screen)) {
       // 3. Ambient menu screens: play "loading.mp3", volume 0.25/0.50, loop natively
       stopAudio(loadingAudioRef, "Loading");
       stopAudio(startAudioRef, "Start");
@@ -239,7 +239,7 @@ export default function App() {
           });
         }
       }
-    } else if (['uiux-projects', 'uiux-experience', 'graphic-design'].includes(screen)) {
+    } else if (['uiux-projects', 'uiux-experience', 'graphic-design', 'about', 'cafeteria-certs'].includes(screen)) {
       // 4. Content screens: play footsteps.mp3
       stopAudio(loadingAudioRef, "Loading");
       stopAudio(startAudioRef, "Start");
@@ -305,7 +305,7 @@ export default function App() {
       if (screen === 'returning-splash') {
         stopAudio(exitAudioRef, "Exit");
       }
-      if (['uiux-projects', 'uiux-experience', 'graphic-design'].includes(screen)) {
+      if (['uiux-projects', 'uiux-experience', 'graphic-design', 'about', 'cafeteria-certs'].includes(screen)) {
         stopAudio(footstepsAudioRef, "Footsteps");
       }
     };
